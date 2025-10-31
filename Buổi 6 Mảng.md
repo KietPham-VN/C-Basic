@@ -1,3 +1,10 @@
+---
+tags:
+  - C
+  - Array
+  - DataStructure
+---
+
 # Lecture Overview
 
 Target Audience: Students familiar with pointers, functions, if-else, and loops
@@ -207,18 +214,18 @@ functions for processing.
   - Method 1: Array Notation
 
   ```c
-  void printArray(int arr[], int size) {
-      for (int i = 0; i < size; i++) {
-          printf("%d ", arr[i]);
-      }
-      printf("\n");
-  }
+void printArray(int arr[], int size) {
+	for (int i = 0; i < size; i++) {
+	    printf("%d ", arr[i]);
+	}
+	printf("\n");
+}
 
-  int main() {
-      int numbers[5] = {1, 2, 3, 4, 5};
-      printArray(numbers, 5);
-      return 0;
-  }
+int main() {
+	int numbers[5] = {1, 2, 3, 4, 5};
+	printArray(numbers, 5);
+	return 0;
+}
   ```
 
 - Method 2: Pointer Notation

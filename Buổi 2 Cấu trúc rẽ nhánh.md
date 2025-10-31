@@ -1,3 +1,12 @@
+---
+tags:
+  - C
+  - "#if-else"
+  - "#switch-case"
+---
+
+
+
 # Buổi 2: Cấu trúc rẽ nhánh
 
 ## 1. Khái niệm

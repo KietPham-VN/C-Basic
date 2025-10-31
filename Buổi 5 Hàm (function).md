@@ -1,3 +1,9 @@
+---
+tags:
+  - C
+  - Function
+---
+
 # Buổi 5 Hàm (function)
 
 ## 1. Khái niệm về hàm (Function)

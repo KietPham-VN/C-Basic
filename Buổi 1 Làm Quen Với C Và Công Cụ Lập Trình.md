@@ -1,3 +1,13 @@
+---
+tags:
+  - C
+  - IDE
+  - "#Variable"
+  - Compilation
+---
+
+
+
 # Buổi 1: Làm Quen Với C Và Công Cụ Lập Trình
 
 1. Hiểu khái niệm IDE và Text Editor.

@@ -1,3 +1,10 @@
+---
+tags:
+  - C
+  - Loop
+---
+
+
 # Bài Giảng: Vòng Lặp Trong Lập Trình C
 
 ## 1. Tổng Quan Về Vòng Lặp

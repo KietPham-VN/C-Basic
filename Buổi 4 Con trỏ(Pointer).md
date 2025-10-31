@@ -1,3 +1,9 @@
+---
+tags:
+  - C
+  - Pointer
+---
+
 # Bài giảng: Nắm vững Con trỏ (Pointers) trong C
 
 ## Mục lục (Table of Contents)
