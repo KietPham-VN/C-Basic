@@ -4,6 +4,7 @@ tags:
   - Array
   - TimeComplexity
   - SpaceComplexity
+  - Algorithm
 ---
 # Time & Space Complexity through Arrays
 
@@ -184,22 +185,20 @@ void findDuplicates(int arr[], int size) {
 ```c
 int binarySearch(int arr[], int size, int target) {
     int left = 0, right = size - 1;
-
+    
     while (left <= right) {
         int mid = left + (right - left) / 2;
-
+        
         if (arr[mid] == target) return mid;
-        if (arr[mid] < target)
-            left = mid + 1;      // Eliminate left half
-        else
-            right = mid - 1;     // Eliminate right half
+        if (arr[mid] < target) left = mid + 1;      // Eliminate left half
+        else right = mid - 1;                       // Eliminate right half
     }
     return -1;
 }
 // Time: O(log n), Space: O(1)
 ```
 
-**How it works:** Find 7 in [1, 3, 5, 7, 9, 11, 13, 15]
+**How it works:** Find 7 in `[1, 3, 5, 7, 9, 11, 13, 15]`
 
 ```markdown
 Step 1: Check mid(9)  → 7 < 9, search left

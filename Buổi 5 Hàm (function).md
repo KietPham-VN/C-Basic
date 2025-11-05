@@ -101,6 +101,7 @@ float tinhCanBacHai(float x) {
 }
 ```
 
+---
 ## 4. Gọi hàm (Function Call)
 
 ### 4.1 Gọi hàm có giá trị trả về (Calling Function with Return Value)
