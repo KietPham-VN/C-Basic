@@ -34,7 +34,7 @@ Array[3] = 3
 Array[4] = 7
 Array[5] = 2
 Mảng bạn vừa nhập là 1, 4, 6, 3, 7, 2
-Số phần tử chẵn: 3  
+Số phần tử chẵn: 3
 Số phần tử lẻ: 3
 ```
 
@@ -114,14 +114,14 @@ B[2] = 6
 Mảng B xuất hiện trong mảng A tại vị trí bắt đầu: 3
 ```
 
-## 7. Tìm phần tử lớn thứ hai  
+## 7. Tìm phần tử lớn thứ hai
 
-**Cho:** Mảng số nguyên `arr` có `n` phần tử.  
-**Yêu cầu:** Viết hàm tìm phần tử lớn thứ hai trong mảng (n >= 2). Không dùng hàm thư viện.  
-**Đầu vào:** `int arr[]`, `int n`  
+**Cho:** Mảng số nguyên `arr` có `n` phần tử.
+**Yêu cầu:** Viết hàm tìm phần tử lớn thứ hai trong mảng (n >= 2). Không dùng hàm thư viện.
+**Đầu vào:** `int arr[]`, `int n`
 **Đầu ra:** Phần tử lớn thứ hai.
 
-**Ví dụ:**  
+**Ví dụ:**
 
 ```console
 Input: arr = [3, 7, 1, 9], n = 4
@@ -150,12 +150,16 @@ A = [1, 2, 3, 4, 5]
 **Giải thích:**
 Các đoạn con thỏa mãn:
 
-- [2, 3]
-- [3, 4]
-- [5]
-- [4, 5]
-- [2, 3, 4]
-- [1, 2, 3, 4, 5]
+- [1, 2, 3] → tổng = 6
+- [2, 3] → tổng = 5
+- [2, 3, 4] → tổng = 9
+- [2, 3, 4, 5] → tổng = 14
+- [3, 4] → tổng = 7
+- [3, 4, 5] → tổng = 12
+- [4, 5] → tổng = 9
+- [5] → tổng = 5
+- [1, 2, 3, 4] → tổng = 10
+- [1, 2, 3, 4, 5] → tổng = 15
 
 ---
 
@@ -172,91 +176,91 @@ N = 10, K = 2
 A = [1,0,0,1,1,0,1,0,1,1]
 ```
 
-**Output:**  
+**Output:**
 
 ```console
-6
+7
 ```
 
-**Giải thích:**  
+**Giải thích:**
 Đổi hai số 0 ở vị trí 5 và 7 (tính từ 0) thành 1, ta được một đoạn liên tiếp gồm 6 số 1: `[1,1,1,1,1,1]` từ vị trí 3 đến 8.
 
 ---
 
 ## Bài 10: Tìm tổng lớn nhất của đoạn con liên tiếp có đúng K phần tử
 
-**Đề bài:**  
-Cho mảng `A[N]` và số nguyên `K`.  
+**Đề bài:**
+Cho mảng `A[N]` và số nguyên `K`.
 Tìm tổng lớn nhất trong mọi đoạn liên tiếp có đúng K phần tử.
 
-**Input:**  
+**Input:**
 
 ```console
 N = 6, K = 3
 A = [3, -2, 5, 1, 2, 4]
 ```
 
-**Output:**  
+**Output:**
 
 ```console
 8
 ```
 
-**Giải thích:**  
+**Giải thích:**
 Các tổng đoạn con dài 3:
 
 - [3, -2, 5] = 6
 - [-2, 5, 1] = 4
 - [5, 1, 2] = 8
-- [1, 2, 4] = 7  
+- [1, 2, 4] = 7
 Tổng lớn nhất là 8 tại đoạn [5, 1, 2].
 
 ---
-<!-- 
+<!--
 ## Bài 4: Tìm đoạn con liên tiếp dài nhất sao cho tổng không vượt quá K
 
-**Đề bài:**  
-Cho mảng `A[N]` và số nguyên `K`.  
+**Đề bài:**
+Cho mảng `A[N]` và số nguyên `K`.
 Tìm độ dài lớn nhất của đoạn liên tiếp có tổng không vượt quá K.
 
-**Input:**  
+**Input:**
 
 ```
 N = 7, K = 8
 A = [1, 2, 3, 1, 1, 1, 2]
 ```
 
-**Output:**  
+**Output:**
 
 ```
 5
 ```
 
-**Giải thích:**  
+**Giải thích:**
 Đoạn `[3, 1, 1, 1, 2]` có tổng là 8, dài 5 là lớn nhất thỏa mãn.
 
 ---
 
 ## Bài 5: Xóa phần tử trùng lặp trong mảng đã sắp xếp
 
-**Đề bài:**  
-Cho một mảng số nguyên đã được sắp xếp không giảm (có thể có phần tử trùng lặp).  
-Hãy xóa các phần tử trùng lặp sao cho mỗi phần tử chỉ xuất hiện một lần.  
+**Đề bài:**
+Cho một mảng số nguyên đã được sắp xếp không giảm (có thể có phần tử trùng lặp).
+Hãy xóa các phần tử trùng lặp sao cho mỗi phần tử chỉ xuất hiện một lần.
 Lưu ý: Thực hiện trực tiếp trên mảng, không dùng mảng phụ.
 
-**Input:**  
+**Input:**
 
 ```
 N = 8
 A = [1, 1, 2, 2, 2, 3, 4, 4]
 ```
 
-**Output:**  
+**Output:**
 
 ```
 Số lượng phần tử còn lại: 4
 Mảng sau khi xóa trùng lặp: 1 2 3 4
 ```
 
-**Giải thích:**  
+**Giải thích:**
 Chỉ giữ lại mỗi số xuất hiện một lần, và theo thứ tự ban đầu. -->
