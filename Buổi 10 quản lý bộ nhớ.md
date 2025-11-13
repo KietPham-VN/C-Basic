@@ -1,30 +1,43 @@
 # Quản Lý bộ nhớ trong C
 
-## 1. Các Vùng Bộ Nhớ (Memory Segments)
+## Table of Contents
 
-### 1.1 📝 Vùng Code/Text (Text Segment)
+1. [Các Vùng Bộ Nhớ (Memory Segments)](#các-vùng-bộ-nhớ-memory-segments)
+   1. [📝 Vùng Code/Text (Text Segment)](#-vùng-codetext-text-segment)
+   2. [📊 Vùng Data (Data Segment)](#-vùng-data-data-segment)
+      1. [Vùng Initialized Data Segment](#vùng-initialized-data-segment)
+      2. [Vùng BSS (Block Started by Symbol)](#vùng-bss-block-started-by-symbol)
+   3. [📚 Vùng Stack (Ngăn Xếp)](#-vùng-stack-ngăn-xếp)
+   4. [📈 Vùng Heap (Bộ Nhớ Động)](#-vùng-heap-bộ-nhớ-động)
+1. [DEMO](#demo)
+
+---
+
+## Các Vùng Bộ Nhớ (Memory Segments)
+
+### 📝 Vùng Code/Text (Text Segment)
 
 - **Chức năng**: Lưu trữ mã máy (machine code) thực thi của chương trình.
 - **Đặc điểm**: Thường là chỉ đọc (read-only). Kích thước cố định.
 
-### 2. 📊 Vùng Data (Data Segment)
+### 📊 Vùng Data (Data Segment)
 
-#### 2.1. Vùng Initialized Data Segment
+#### Vùng Initialized Data Segment
 
 - **Chức năng**: Lưu trữ các biến toàn cục (global) và tĩnh (static) đã được khởi tạo bằng một giá trị khác 0.
 - **Đặc điểm**: Dữ liệu này được tải từ file thực thi. Kích thước cố định.
 
-#### 2.2 Vùng BSS (Block Started by Symbol)
+#### Vùng BSS (Block Started by Symbol)
 
 - **Chức năng**: Lưu trữ các biến toàn cục và tĩnh chưa được khởi tạo hoặc được khởi tạo bằng 0 một cách rõ ràng.
 - **Đặc điểm**: Không chiếm dung lượng trong file thực thi. Hệ điều hành cấp phát và khởi tạo tất cả bằng 0 lúc chương trình chạy.
 
-### 3. 📚 Vùng Stack (Ngăn Xếp)
+### 📚 Vùng Stack (Ngăn Xếp)
 
 - **Chức năng**: Dành cho cấp phát tự động (Automatic Allocation). Lưu trữ biến cục bộ và thông tin lời gọi hàm.
 - **Đặc điểm**: Kích thước linh hoạt, tăng trưởng về phía địa chỉ thấp hơn (trên hầu hết các kiến trúc). Bộ nhớ tự động giải phóng khi hàm kết thúc.
 
-### 4. 📈 Vùng Heap (Bộ Nhớ Động)
+### 📈 Vùng Heap (Bộ Nhớ Động)
 
 - **Chức năng**: Dành cho cấp phát bộ nhớ động (Dynamic Allocation) bằng các hàm `malloc()`, `calloc()`, và `realloc()`.
 - **Đặc điểm**: Kích thước linh hoạt, tăng trưởng về phía địa chỉ cao hơn. Phải được giải phóng thủ công bằng `free()`.
@@ -32,6 +45,8 @@
 > Trong nhiều tài liệu, người ta thường nhóm Vùng Dữ liệu Khởi tạo và Vùng BSS lại thành một Vùng Dữ liệu (Data Segment) chung, từ đó tạo ra 4 khu vực chính: Text/Code, Data (gồm BSS và Initialized Data), Heap, Stack.
 
 ---
+
+## DEMO
 
 ```c
 #include <stdio.h>
